@@ -6,7 +6,9 @@
     "test": "jest",
     "dev": "nodemon src/server.ts",
     "build": "tsup-node",
-    "start": "node dist/server.js"
+    "start": "node dist/server.js",
+    "lint": "biome check .",
+    "format": "biome format . --write"
   },
   "keywords": [],
   "author": "",
