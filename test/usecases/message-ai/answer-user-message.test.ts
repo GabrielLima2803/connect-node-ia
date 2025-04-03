@@ -5,6 +5,10 @@ import { redisTools } from "../../../src/ai/tools/redis-tools";
 import { answerUserMessage } from "../../../src/usecases/message-ai/answer-user-message";
 import { closeRedis } from "../../../src/config/redis/client";
 
+process.env.REDIS_URL = "redis://localhost:6379";
+process.env.DATABASE_URL = "postgresql://user:password@localhost:5432/dbname";
+process.env.GOOGLE_GENERATIVE_AI_API_KEY = "chave-de-teste";
+
 jest.mock("ai", () => ({
   generateText: jest.fn(),
   tool: jest.fn((config) => config),
