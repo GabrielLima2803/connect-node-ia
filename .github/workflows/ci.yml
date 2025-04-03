@@ -28,8 +28,8 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Deploy Prisma Migrations
-        run: npx prisma migrate deploy
+      # - name: Deploy Prisma Migrations
+      #   run: npx prisma migrate deploy
 
       - name: Run tests
         run: npm test
