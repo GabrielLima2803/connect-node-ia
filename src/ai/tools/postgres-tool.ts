@@ -1,6 +1,6 @@
 import { tool } from "ai";
 import z from "zod";
-import prisma from "../../config/prisma/client.";
+import prisma from "../../config/prisma/client";
 
 const ALLOWED_COLUMNS = ['id', 'name', 'email', 'created_at'];
 const ALLOWED_TABLE = 'subscription';

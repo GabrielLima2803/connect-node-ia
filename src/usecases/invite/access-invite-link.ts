@@ -1,4 +1,4 @@
-import redis from "../../config/redis/client.";
+import redis from "../../config/redis/client";
 
 interface AccessInviteLinkParams {
     subscriberId: string;

@@ -1,5 +1,5 @@
-import prisma from "../../config/prisma/client.";
-import redis from "../../config/redis/client.";
+import prisma from "../../config/prisma/client";
+import redis from "../../config/redis/client";
 
 
 export async function getRanking() {

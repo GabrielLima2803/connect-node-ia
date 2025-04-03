@@ -1,6 +1,6 @@
 import { tool } from "ai";
 import z from "zod";
-import redis from "../../config/redis/client.";
+import redis from "../../config/redis/client";
 
 const allowedCommands = ["GET", "HGET", "ZREVRANGE"];
 
