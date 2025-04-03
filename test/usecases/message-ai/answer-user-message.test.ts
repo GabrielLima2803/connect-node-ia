@@ -3,6 +3,7 @@ import { google } from "../../../src/config/ai/google-ai";
 import { postgresTools } from "../../../src/ai/tools/postgres-tool";
 import { redisTools } from "../../../src/ai/tools/redis-tools";
 import { answerUserMessage } from "../../../src/usecases/message-ai/answer-user-message";
+import { closeRedis } from "../../../src/config/redis/client";
 
 jest.mock("ai", () => ({
   generateText: jest.fn(),
@@ -38,5 +39,9 @@ describe("answerUserMessage", () => {
       .rejects.toThrow("Erro na IA");
 
     expect(generateText).toHaveBeenCalled();
+  });
+
+  afterAll(async () => {
+    await closeRedis();
   });
 });
