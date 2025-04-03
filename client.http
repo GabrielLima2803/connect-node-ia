@@ -24,3 +24,11 @@ GET http://{{host}}/subscriptions/1/ranking/position
 
 ### Get ranking
 GET http://{{host}}/ranking
+
+
+POST http://{{host}}/messages
+Content-Type: application/json
+
+{
+  "message": "Me retorne o e-mail e o número de indicações de cada usuário da minha aplicação"
+}
